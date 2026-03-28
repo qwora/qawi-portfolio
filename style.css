@@ -179,24 +179,16 @@ body.hovering a, body.hovering button {
   transform: translateY(0);
 }
 
-.hero-animation-container {
-  height: 30vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2rem;
-  perspective: 1000px;
+.hero-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-}
-
-.hero-car {
-  width: 100%;
-  max-width: 600px;
-  transform: scale(0.5); /* Starts a bit smaller */
-  opacity: 0;
-  transform-origin: center center;
-  filter: invert(1); /* Invert the black SVG to white */
-  will-change: transform, opacity;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1; /* Below the title and overlay */
+  opacity: 0.5; /* Dimmed to make text readable */
+  pointer-events: none;
 }
 
 /* INTRO */
